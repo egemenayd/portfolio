@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Egemen - Building High-Performance Digital Solutions for Local Businesses">
+    <title>Egemen | Digital Solutions Developer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+        }
+        
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+        
+        .tech-badge {
+            transition: all 0.2s ease;
+        }
+        
+        .tech-badge:hover {
+            transform: scale(1.05);
+            background-color: rgba(99, 102, 241, 0.2);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        .stagger-6 { animation-delay: 0.6s; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #4f46e5;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366f1;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white antialiased">
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden">
+        <!-- Background gradient effect -->
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-slate-900 to-purple-900/20"></div>
+        <div class="absolute top-20 left-10 w-72 h-72 bg-indigo-600/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="opacity-0 animate-fade-in-up">
+                <h1 class="text-7xl md:text-8xl font-bold mb-6 tracking-tight">
+                    <span class="gradient-text">Egemen A.</span>
+                </h1>
+                <p class="text-2xl md:text-3xl text-slate-300 mb-8 font-light leading-relaxed max-w-3xl mx-auto">
+                    Building High-Performance Digital Solutions for Local Businesses
+                </p>
+                <div class="flex gap-4 justify-center flex-wrap">
+                    <a href="#portfolio" class="btn-primary inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-lg font-semibold">
+                        <span>View My Work</span>
+                        <i data-lucide="arrow-down" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#contact" class="btn-primary inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 px-8 py-4 rounded-lg font-semibold">
+                        <span>Get In Touch</span>
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in-up stagger-3">
+            <div class="flex flex-col items-center gap-2">
+                <span class="text-slate-400 text-sm">Scroll to explore</span>
+                <i data-lucide="chevron-down" class="w-6 h-6 text-indigo-400 animate-bounce"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery Section -->
+    <section id="portfolio" class="py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4 gradient-text">Featured Projects</h2>
+                <p class="text-xl text-slate-400">High-performance digital solutions for modern businesses</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div class="card-hover bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 opacity-0 animate-fade-in-up stagger-1">
+                    <div class="h-48 bg-slate-700 relative overflow-hidden">
+                        <img src="usacr.png" alt="USA Commercial Renovations" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-slate-900/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-slate-300 border border-slate-700">
+                                Completed Project
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">USA Commercial Renovations</h3>
+                        <p class="text-slate-400 mb-4">Commercial Renovation Services</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-badge bg-slate-700/50 px-3 py-1 rounded-lg text-xs font-medium border border-slate-600">HTML/CSS</span>
+                            <span class="tech-badge bg-slate-700/50 px-3 py-1 rounded-lg text-xs font-medium border border-slate-600">JavaScript</span>
+                            <span class="tech-badge bg-slate-700/50 px-3 py-1 rounded-lg text-xs font-medium border border-slate-600">Bootstrap</span>
+                        </div>
+                        
+                        <a href="https://usacommercialrenovations.com" target="_blank" rel="noopener noreferrer" class="btn-primary w-full inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-lg font-semibold">
+                            <span>Visit Live Site</span>
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="card-hover bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 opacity-0 animate-fade-in-up stagger-2">
+                    <div class="h-48 bg-slate-700 relative overflow-hidden">
+                        <img src="NKR.png" alt="New Kingston Remodeling" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-slate-900/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-slate-300 border border-slate-700">
+                                Ongoing Project
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">New Kingston Remodeling</h3>
+                        <p class="text-slate-400 mb-4">Home Remodeling & Renovation</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-badge bg-slate-700/50 px-3 py-1 rounded-lg text-xs font-medium border border-slate-600">HTML/CSS</span>
+                            <span class="tech-badge bg-slate-700/50 px-3 py-1 rounded-lg text-xs font-medium border border-slate-600">JavaScript</span>
+                            <span class="tech-badge bg-slate-700/50 px-3 py-1 rounded-lg text-xs font-medium border border-slate-600">Bootstrap</span>
+                        </div>
+                        
+                        <a href="https://NewKingstonRemodeling.com" target="_blank" rel="noopener noreferrer" class="btn-primary w-full inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-lg font-semibold">
+                            <span>Visit Live Site</span>
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="card-hover bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 opacity-0 animate-fade-in-up stagger-3">
+                    <div class="h-48 bg-slate-700 relative overflow-hidden">
+                        <img src="tipytip.png" alt="TipyTip" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-indigo-600/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-white border border-indigo-500">
+                                My Web App
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">TipyTip</h3>
+                        <p class="text-slate-400 mb-4">Digital Tipping Platform</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-badge bg-slate-700/50 px-3 py-1 rounded-lg text-xs font-medium border border-slate-600">HTML/CSS</span>
+                            <span class="tech-badge bg-slate-700/50 px-3 py-1 rounded-lg text-xs font-medium border border-slate-600">JavaScript</span>
+                            <span class="tech-badge bg-slate-700/50 px-3 py-1 rounded-lg text-xs font-medium border border-slate-600">PHP</span>
+                        </div>
+                        
+                        <a href="https://TipyTip.com" target="_blank" rel="noopener noreferrer" class="btn-primary w-full inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-lg font-semibold">
+                            <span>Visit Live Site</span>
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="py-24 px-6 bg-slate-800/30 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4 gradient-text">Tech Stack & Expertise</h2>
+                <p class="text-xl text-slate-400">Delivering cutting-edge solutions with modern technologies</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Expertise Card 1 -->
+                <div class="card-hover bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-indigo-600/20 rounded-2xl flex items-center justify-center">
+                        <i data-lucide="code-2" class="w-8 h-8 text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Modern Frontend</h3>
+                    <p class="text-slate-400 mb-6">Building responsive, performant user interfaces with React, Next.js, Vue, and TypeScript.</p>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="tech-badge bg-slate-700/50 px-4 py-2 rounded-lg text-sm font-medium border border-slate-600">React</span>
+                        <span class="tech-badge bg-slate-700/50 px-4 py-2 rounded-lg text-sm font-medium border border-slate-600">Next.js</span>
+                        <span class="tech-badge bg-slate-700/50 px-4 py-2 rounded-lg text-sm font-medium border border-slate-600">Vue.js</span>
+                        <span class="tech-badge bg-slate-700/50 px-4 py-2 rounded-lg text-sm font-medium border border-slate-600">TypeScript</span>
+                        <span class="tech-badge bg-slate-700/50 px-4 py-2 rounded-lg text-sm font-medium border border-slate-600">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <!-- Expertise Card 2 -->
+                <div class="card-hover bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-cyan-600/20 rounded-2xl flex items-center justify-center">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Small Business Digital Strategy</h3>
+                    <p class="text-slate-400 mb-6">Creating conversion-focused digital experiences that drive real business growth.</p>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="tech-badge bg-slate-700/50 px-4 py-2 rounded-lg text-sm font-medium border border-slate-600">SEO</span>
+                        <span class="tech-badge bg-slate-700/50 px-4 py-2 rounded-lg text-sm font-medium border border-slate-600">Performance</span>
+                        <span class="tech-badge bg-slate-700/50 px-4 py-2 rounded-lg text-sm font-medium border border-slate-600">Analytics</span>
+                        <span class="tech-badge bg-slate-700/50 px-4 py-2 rounded-lg text-sm font-medium border border-slate-600">UX Design</span>
+                        <span class="tech-badge bg-slate-700/50 px-4 py-2 rounded-lg text-sm font-medium border border-slate-600">Conversion</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Modern Websites Section -->
+    <section class="py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4 gradient-text">Why Your Business Needs a Modern Website</h2>
+                <p class="text-xl text-slate-400">In today's digital world, your website is your most powerful business tool</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Benefit 1 -->
+                <div class="card-hover bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+                    <div class="w-16 h-16 mb-6 bg-indigo-600/20 rounded-2xl flex items-center justify-center">
+                        <i data-lucide="users" class="w-8 h-8 text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">24/7 Customer Access</h3>
+                    <p class="text-slate-400">Your website works around the clock, allowing customers to learn about your services, view pricing, and contact you anytime—even when your business is closed.</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="card-hover bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+                    <div class="w-16 h-16 mb-6 bg-purple-600/20 rounded-2xl flex items-center justify-center">
+                        <i data-lucide="search" class="w-8 h-8 text-purple-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Get Found Online</h3>
+                    <p class="text-slate-400">82% of consumers search online before making a purchase decision. Without a website, you're invisible to potential customers actively looking for your services.</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="card-hover bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+                    <div class="w-16 h-16 mb-6 bg-cyan-600/20 rounded-2xl flex items-center justify-center">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Build Trust & Credibility</h3>
+                    <p class="text-slate-400">A professional website instantly establishes credibility. Customers are more likely to trust and choose businesses with a modern, well-designed online presence.</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="card-hover bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+                    <div class="w-16 h-16 mb-6 bg-green-600/20 rounded-2xl flex items-center justify-center">
+                        <i data-lucide="target" class="w-8 h-8 text-green-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Compete with Larger Businesses</h3>
+                    <p class="text-slate-400">A high-quality website levels the playing field, allowing small businesses to compete effectively with larger competitors in their market.</p>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="card-hover bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+                    <div class="w-16 h-16 mb-6 bg-orange-600/20 rounded-2xl flex items-center justify-center">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-orange-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Cost-Effective Marketing</h3>
+                    <p class="text-slate-400">Your website is a one-time investment that provides ongoing marketing value, reaching more customers at a lower cost than traditional advertising.</p>
+                </div>
+
+                <!-- Benefit 6 -->
+                <div class="card-hover bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+                    <div class="w-16 h-16 mb-6 bg-pink-600/20 rounded-2xl flex items-center justify-center">
+                        <i data-lucide="zap" class="w-8 h-8 text-pink-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Fast Performance</h3>
+                    <p class="text-slate-400">Modern websites load in under 2 seconds, providing instant information to potential customers before they move on to your competitors.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 relative">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-bold mb-6 gradient-text">Let's Build Something Together</h2>
+            <p class="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">
+                Ready to elevate your business with a high-performance digital presence? Let's connect and discuss your project.
+            </p>
+            
+            <div class="flex justify-center">
+                
+                <!-- Email Button -->
+                <a href="mailto:egemena99@gmail.com" class="btn-primary group inline-flex items-center justify-center gap-3 bg-indigo-600 hover:bg-indigo-700 px-12 py-6 rounded-xl font-semibold text-xl">
+                    <i data-lucide="mail" class="w-7 h-7 group-hover:scale-110 transition-transform"></i>
+                    <span>Email Me</span>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-slate-400">
+                © 2026 Egemen A. Built with passion for high-performance digital solutions.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
